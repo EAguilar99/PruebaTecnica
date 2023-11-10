@@ -13,6 +13,11 @@
 		F95D4BF42AFE9AC0007CCC4A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F95D4BF22AFE9AC0007CCC4A /* Main.storyboard */; };
 		F95D4BF62AFE9AC2007CCC4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F95D4BF52AFE9AC2007CCC4A /* Assets.xcassets */; };
 		F95D4BF92AFE9AC2007CCC4A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F95D4BF72AFE9AC2007CCC4A /* LaunchScreen.storyboard */; };
+		F95D4C072AFE9D6D007CCC4A /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95D4C062AFE9D6D007CCC4A /* Results.swift */; };
+		F95D4C092AFE9E45007CCC4A /* GetAllBanks.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95D4C082AFE9E45007CCC4A /* GetAllBanks.swift */; };
+		F95D4C112AFEBECF007CCC4A /* BankCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95D4C0F2AFEBECF007CCC4A /* BankCell.swift */; };
+		F95D4C122AFEBECF007CCC4A /* BankCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F95D4C102AFEBECF007CCC4A /* BankCell.xib */; };
+		F95D4C182AFECB80007CCC4A /* Banks.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F95D4C162AFECB80007CCC4A /* Banks.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		F95D4BF52AFE9AC2007CCC4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F95D4BF82AFE9AC2007CCC4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F95D4BFA2AFE9AC2007CCC4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F95D4C062AFE9D6D007CCC4A /* Results.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
+		F95D4C082AFE9E45007CCC4A /* GetAllBanks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllBanks.swift; sourceTree = "<group>"; };
+		F95D4C0F2AFEBECF007CCC4A /* BankCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankCell.swift; sourceTree = "<group>"; };
+		F95D4C102AFEBECF007CCC4A /* BankCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BankCell.xib; sourceTree = "<group>"; };
+		F95D4C172AFECB80007CCC4A /* Banks.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Banks.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +66,60 @@
 		F95D4BEB2AFE9AC0007CCC4A /* PruebaTecnica */ = {
 			isa = PBXGroup;
 			children = (
+				F95D4C032AFE9B1B007CCC4A /* Controller */,
+				F95D4C022AFE9B0B007CCC4A /* ViewModel */,
+				F95D4C012AFE9AFF007CCC4A /* View */,
+				F95D4C002AFE9AF0007CCC4A /* Model */,
 				F95D4BEC2AFE9AC0007CCC4A /* AppDelegate.swift */,
-				F95D4BEE2AFE9AC0007CCC4A /* SceneDelegate.swift */,
-				F95D4BF02AFE9AC0007CCC4A /* ViewController.swift */,
-				F95D4BF22AFE9AC0007CCC4A /* Main.storyboard */,
-				F95D4BF52AFE9AC2007CCC4A /* Assets.xcassets */,
 				F95D4BF72AFE9AC2007CCC4A /* LaunchScreen.storyboard */,
+				F95D4BF22AFE9AC0007CCC4A /* Main.storyboard */,
+				F95D4BEE2AFE9AC0007CCC4A /* SceneDelegate.swift */,
+				F95D4BF52AFE9AC2007CCC4A /* Assets.xcassets */,
 				F95D4BFA2AFE9AC2007CCC4A /* Info.plist */,
+				F95D4C162AFECB80007CCC4A /* Banks.xcdatamodeld */,
 			);
 			path = PruebaTecnica;
+			sourceTree = "<group>";
+		};
+		F95D4C002AFE9AF0007CCC4A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F95D4C062AFE9D6D007CCC4A /* Results.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F95D4C012AFE9AFF007CCC4A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F95D4C0A2AFEBE55007CCC4A /* Cell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F95D4C022AFE9B0B007CCC4A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F95D4C082AFE9E45007CCC4A /* GetAllBanks.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F95D4C032AFE9B1B007CCC4A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F95D4BF02AFE9AC0007CCC4A /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F95D4C0A2AFEBE55007CCC4A /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F95D4C0F2AFEBECF007CCC4A /* BankCell.swift */,
+				F95D4C102AFEBECF007CCC4A /* BankCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +181,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F95D4BF92AFE9AC2007CCC4A /* LaunchScreen.storyboard in Resources */,
+				F95D4C122AFEBECF007CCC4A /* BankCell.xib in Resources */,
 				F95D4BF62AFE9AC2007CCC4A /* Assets.xcassets in Resources */,
 				F95D4BF42AFE9AC0007CCC4A /* Main.storyboard in Resources */,
 			);
@@ -138,9 +194,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F95D4C182AFECB80007CCC4A /* Banks.xcdatamodeld in Sources */,
 				F95D4BF12AFE9AC0007CCC4A /* ViewController.swift in Sources */,
+				F95D4C092AFE9E45007CCC4A /* GetAllBanks.swift in Sources */,
+				F95D4C112AFEBECF007CCC4A /* BankCell.swift in Sources */,
 				F95D4BED2AFE9AC0007CCC4A /* AppDelegate.swift in Sources */,
 				F95D4BEF2AFE9AC0007CCC4A /* SceneDelegate.swift in Sources */,
+				F95D4C072AFE9D6D007CCC4A /* Results.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +418,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F95D4C162AFECB80007CCC4A /* Banks.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F95D4C172AFECB80007CCC4A /* Banks.xcdatamodel */,
+			);
+			currentVersion = F95D4C172AFECB80007CCC4A /* Banks.xcdatamodel */;
+			path = Banks.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = F95D4BE12AFE9AC0007CCC4A /* Project object */;
 }
