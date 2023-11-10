@@ -42,7 +42,6 @@ class Bank
             let entidad = NSEntityDescription.entity(forEntityName: "Banks", in: context)
             let bankCoreData = NSManagedObject(entity: entidad!, insertInto: context)
             let imageData = try Data(contentsOf: URL(string: bank.url!)!)
-            //print(imageData)
             
             bankCoreData.setValue(imageData, forKey: "image")
             bankCoreData.setValue(bank.bankName, forKey: "bankName")
@@ -51,7 +50,6 @@ class Bank
             bankCoreData.setValue(bank.url, forKey: "url")
             
             try context.save()
-            //print("Guardado")
             
         }catch let error{
             print("Error al guardad \(error)")
