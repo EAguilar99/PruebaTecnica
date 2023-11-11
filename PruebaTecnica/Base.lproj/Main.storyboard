@@ -16,31 +16,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="fHX-Bh-6IY">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsMultipleSelection="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ero-he-WDl">
                                 <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="759" id="C6f-IL-bpD"/>
-                                    <constraint firstAttribute="width" constant="393" id="u7p-P6-CC5"/>
+                                    <constraint firstAttribute="height" constant="759" id="1mQ-1J-Xzj"/>
+                                    <constraint firstAttribute="width" constant="393" id="IAG-Jy-tiC"/>
                                 </constraints>
-                                <color key="sectionIndexBackgroundColor" systemColor="systemPinkColor"/>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemPinkColor"/>
                         <constraints>
-                            <constraint firstItem="fHX-Bh-6IY" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="3Bd-0D-to5"/>
-                            <constraint firstItem="fHX-Bh-6IY" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="BeI-HS-5tZ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fHX-Bh-6IY" secondAttribute="bottom" id="IqU-9X-oid"/>
-                            <constraint firstItem="fHX-Bh-6IY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="RyL-i1-0Ew"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fHX-Bh-6IY" secondAttribute="trailing" id="Wz2-jm-YPz"/>
-                            <constraint firstItem="fHX-Bh-6IY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ehg-SS-JdD"/>
-                            <constraint firstItem="fHX-Bh-6IY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="iMB-sg-b2D"/>
-                            <constraint firstItem="fHX-Bh-6IY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="jZf-60-jzs"/>
+                            <constraint firstItem="ero-he-WDl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ASl-KW-QQH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ero-he-WDl" secondAttribute="trailing" id="URq-aW-0Ap"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ero-he-WDl" secondAttribute="bottom" id="bQP-Iz-XE3"/>
+                            <constraint firstItem="ero-he-WDl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="reK-MM-LFr"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="tableBanks" destination="fHX-Bh-6IY" id="ltF-tq-BAj"/>
+                        <outlet property="tableBanks" destination="ero-he-WDl" id="pad-NH-r10"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

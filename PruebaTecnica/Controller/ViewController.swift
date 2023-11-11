@@ -21,6 +21,8 @@ class ViewController: UIViewController {
         self.tableBanks.delegate = self
         self.tableBanks.dataSource = self
         self.tableBanks.register(UINib(nibName: "BankCell", bundle: .main), forCellReuseIdentifier: "banks")
+
+           
     }
     
     func validarDatos() -> Bool{
@@ -52,7 +54,6 @@ class ViewController: UIViewController {
                 self.save(banks: self.banks)
                 DispatchQueue.main.async {
                     self.tableBanks.reloadData()
-                    
                 }
             }
         }
@@ -76,9 +77,40 @@ class ViewController: UIViewController {
 
 extension ViewController : UITableViewDelegate, UITableViewDataSource
 {
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         1
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    
+        let alertController = UIAlertController(title: "Detalles del Banco", message: "\(banks[indexPath.row].bankName!) \n \(banks[indexPath.row].description!)", preferredStyle: .alert)
+        
+        let url = URL(string: banks[indexPath.row].url!)!
+        let imageView = UIImageView(frame: CGRect(x: 60, y: 100, width: 150, height: 150))
+        imageView.load(url: url)
+             
+             alertController.view.addSubview(imageView)
+             
+        let heightConstraint = NSLayoutConstraint(item: alertController.view!,
+                                                         attribute: NSLayoutConstraint.Attribute.height,
+                                                         relatedBy: NSLayoutConstraint.Relation.equal,
+                                                         toItem: nil,
+                                                         attribute: NSLayoutConstraint.Attribute.notAnAttribute,
+                                                         multiplier: 1,
+                                                         constant: 300)
+
+               alertController.view.addConstraint(heightConstraint)
+        
+        
+             let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+             alertController.addAction(okAction)
+             
+             present(alertController, animated: true, completion: nil)
+        
+    }
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return banks.count
     }
@@ -87,6 +119,7 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource
         
         let urlImage = URL(string: banks[indexPath.row].url!)!
         
+        cell.imageBank.layer.cornerRadius = 20
         cell.imageBank.load(url: urlImage)
         cell.nameBank.text = banks[indexPath.row].bankName
         cell.detalle.text = ("Descripcion:\(banks[indexPath.row].description!)")
